@@ -39,8 +39,12 @@ Nota: el script usa `semanas/AAAA-MM-DD/` para ordenar, así que la semana con l
 
 ## Guía visual (brand TBS)
 
+Guía completa en PDF: [`docs/Guia-estilo-artefactos-TBS.pdf`](docs/Guia-estilo-artefactos-TBS.pdf). Resumen:
+
+
 - Fondo negro `#121214` con cuadrícula fina y cruces, como la web.
 - Verde `#11E07F`: solo para encapsular el contenido formativo (la cápsula del día abierto) y el texto y botones de dentro. Nunca para destacar palabras sueltas. Dentro de la cápsula, solo variantes de ese verde.
+- Azul `#0066FF`: cápsula de autoridad (datos oficiales, fuentes, cifras de la escuela, profesores, colaboradores), solo si aporta y como mucho una por artefacto.
 - Blanco: cápsula de "Con qué quedarse" y "Las tres preguntas". Palabra destacada en cursiva: mismo color que el titular.
 - Acabados mate: colores sólidos, sin brillos ni sombras de color.
 - Rosa `#FF0A54`: marca y "Día clave". Azul `#0066FF`: "Hoy" y el trazo inferior de las tarjetas neutras.

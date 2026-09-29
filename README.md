@@ -36,3 +36,12 @@ Un array `DAYS` con cinco días (lunes a viernes). Cada día tiene:
 - `events`: lista de datos del día. Cada uno con `region`, `title`, `text`, y opcionalmente `main: true` (ocupa todo el ancho), `why` (por qué importa), `scen` (lista de `["Escenario", "Qué suele pasar"]`) y `watch` (qué mirar).
 
 Nota: el script usa `semanas/AAAA-MM-DD/` para ordenar, así que la semana con la fecha más reciente es la que aparece en el enlace fijo.
+
+## Guía visual (brand TBS)
+
+- Fondo negro `#121214` con cuadrícula fina y cruces, como la web.
+- Verde `#11E07F`: contenido formativo e informativo (la cápsula del día abierto), botones y palabras destacadas. Dentro de la cápsula, solo variantes de ese verde.
+- Rosa `#FF0A54`: marca y "Día clave". Azul `#0066FF`: "Hoy" y el trazo inferior de las tarjetas neutras.
+- Trazos gruesos: bordes de 2 px y trazo inferior de 3–4 px en tarjetas.
+- Tipografías: Raleway (titulares), Space Grotesk (etiquetas y fechas), Playfair Display cursiva (palabra destacada).
+- Pensado primero para móvil: en pantallas estrechas la fila de días queda fija arriba mientras se lee.

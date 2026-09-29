@@ -46,5 +46,5 @@ Nota: el script usa `semanas/AAAA-MM-DD/` para ordenar, así que la semana con l
 - Rosa `#FF0A54`: marca y "Día clave". Azul `#0066FF`: "Hoy" y el trazo inferior de las tarjetas neutras.
 - Trazos gruesos de 2 px, iguales en todos los lados de cada cápsula.
 - Botones a TikTok e Instagram en cabecera y pie.
-- Tipografías: Raleway (titulares), Space Grotesk (etiquetas y fechas), Playfair Display cursiva (palabra destacada).
+- Tipografías: Raleway (titulares y texto), Space Grotesk (etiquetas, fechas y SIEMPRE todos los números, también dentro del texto), Playfair Display cursiva (palabra destacada).
 - Pensado primero para móvil: en pantallas estrechas la fila de días queda fija arriba mientras se lee.

@@ -100,7 +100,7 @@ h1{margin:0;font-family:var(--font-primary);font-weight:800;font-size:clamp(34px
 .state{font-family:var(--font-ui);font-weight:500;font-size:12px;color:var(--fg-3);display:inline-flex;align-items:center;gap:5px}
 .state::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px solid currentColor}
 .date{display:flex;align-items:baseline;gap:6px}
-.num{font-family:var(--font-primary);font-weight:800;font-size:44px;line-height:.95;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.num{font-family:var(--font-ui);font-weight:700;font-size:44px;line-height:.95;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
 .mon{font-family:var(--font-ui);font-weight:700;font-size:13px;text-transform:uppercase;color:var(--fg-3)}
 .badges{display:flex;gap:6px;flex-wrap:wrap;min-height:24px}
 .badges .tag{padding:5px 9px;font-size:11px}
@@ -154,9 +154,11 @@ h1{margin:0;font-family:var(--font-primary);font-weight:800;font-size:clamp(34px
 .archive{align-self:flex-start;color:var(--fg-1);font-family:var(--font-primary);font-weight:800;font-size:15px;text-decoration:none;border:var(--stroke) solid var(--line-strong);border-radius:44px;padding:11px 20px}
 .archive:hover{border-color:var(--fg-1)}
 
+.n{font-family:var(--font-ui);font-weight:inherit;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .fade{animation:fade .28s var(--ease) both}
 @keyframes fade{from{opacity:.001;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion: reduce){.fade{animation:none}.day,.nav button{transition:none}.day:active{transform:none}}
+@media (prefers-reduced-motion: reduce){.n{font-family:var(--font-ui);font-weight:inherit;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.fade{animation:none}.day,.nav button{transition:none}.day:active{transform:none}}
 
 /* Phone first-class: most readers open this from Telegram */
 @media (max-width:780px){
@@ -286,6 +288,34 @@ function balance(events){
   return out;
 }
 
+// Numbers always in Space Grotesk: wrap every run of digits in running text.
+function wrapNumbers(root){
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node){
+      const el = node.parentElement;
+      if (!el || !/\d/.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+      if (el.closest("script,style,svg,.n,.num")) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    const frag = document.createDocumentFragment();
+    const text = node.nodeValue;
+    let last = 0;
+    text.replace(/\d+(?:[.,]\d+)*/g, (m, idx) => {
+      if (idx > last) frag.appendChild(document.createTextNode(text.slice(last, idx)));
+      const s = document.createElement("span");
+      s.className = "n"; s.textContent = m;
+      frag.appendChild(s);
+      last = idx + m.length;
+    });
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    node.parentNode.replaceChild(frag, node);
+  });
+}
+
 function open(i, fromClick){
   current = i;
   const d = DAYS[i];
@@ -301,6 +331,7 @@ function open(i, fromClick){
       '<button type="button" id="prev"' + (i === 0 ? ' disabled' : '') + '>← ' + (i > 0 ? DAYS[i-1].dow : 'Anterior') + '</button>' +
       '<button type="button" id="next"' + (i === DAYS.length-1 ? ' disabled' : '') + '>' + (i < DAYS.length-1 ? DAYS[i+1].dow : 'Siguiente') + ' →</button>' +
     '</div>';
+  wrapNumbers(sheet);
   document.getElementById("prev").addEventListener("click", () => { if (current > 0) open(current - 1, true); });
   document.getElementById("next").addEventListener("click", () => { if (current < DAYS.length - 1) open(current + 1, true); });
   if (fromClick && window.matchMedia("(max-width:780px)").matches){
@@ -309,6 +340,7 @@ function open(i, fromClick){
   }
 }
 
+wrapNumbers(document.querySelector(".wrap"));
 open(current, false);
 </script>
 

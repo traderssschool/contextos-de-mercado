@@ -41,6 +41,11 @@ def pagina_semana(carpeta: Path, enlace_archivo: str) -> str:
     return salida
 
 
+def num(texto: str) -> str:
+    """Envuelve las cifras para mostrarlas en Space Grotesk."""
+    return re.sub(r"\d+(?:[.,]\d+)*", lambda m: f'<span class="n">{m.group(0)}</span>', texto)
+
+
 def pagina_archivo(semanas) -> str:
     filas = []
     for i, carpeta in enumerate(semanas):
@@ -51,8 +56,8 @@ def pagina_archivo(semanas) -> str:
         filas.append(
             f'<li><a href="../semanas/{carpeta.name}/">'
             f'<span class="fecha">{fecha}</span>'
-            f'<span class="texto"><strong>{html.escape(datos["rango"])}</strong>'
-            f'<span>{html.escape(datos.get("resumen_archivo", ""))}</span></span>{actual}</a></li>'
+            f'<span class="texto"><strong>{num(html.escape(datos["rango"]))}</strong>'
+            f'<span>{num(html.escape(datos.get("resumen_archivo", "")))}</span></span>{actual}</a></li>'
         )
     lista = "\n      ".join(filas)
     return f"""<!doctype html>
@@ -80,6 +85,7 @@ a:focus-visible{{outline:2px solid #fff;outline-offset:3px}}
 .fecha{{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;color:rgba(255,255,255,.68)}}
 .texto{{display:flex;flex-direction:column;gap:2px}}
 .texto strong{{font-weight:800;font-size:18px}}
+.n{{font-family:"Space Grotesk",sans-serif;font-variant-numeric:tabular-nums}}
 .texto span{{color:var(--fg-3);font-size:15px}}
 .tag{{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;padding:5px 10px;border-radius:40px;border:1.5px solid var(--brand);background:rgba(255,10,84,.14);white-space:nowrap}}
 @media (max-width:600px){{li a{{grid-template-columns:minmax(0,1fr)}}.tag{{justify-self:start}}}}

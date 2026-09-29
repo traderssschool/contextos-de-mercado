@@ -41,14 +41,20 @@ Nota: el script usa `semanas/AAAA-MM-DD/` para ordenar, así que la semana con l
 
 Guía completa en PDF: [`docs/Guia-estilo-artefactos-TBS.pdf`](docs/Guia-estilo-artefactos-TBS.pdf). Resumen:
 
-
 - Fondo negro `#121214` con cuadrícula fina y cruces, como la web.
 - Verde `#11E07F`: solo para encapsular el contenido formativo (la cápsula del día abierto) y el texto y botones de dentro. Nunca para destacar palabras sueltas. Dentro de la cápsula, solo variantes de ese verde.
 - Azul `#0066FF`: cápsula de autoridad (datos oficiales, fuentes, cifras de la escuela, profesores, colaboradores), solo si aporta y como mucho una por artefacto.
 - Blanco: cápsula de "Con qué quedarse" y "Las tres preguntas". Palabra destacada en cursiva: mismo color que el titular.
 - Acabados mate: colores sólidos, sin brillos ni sombras de color.
-- Rosa `#FF0A54`: marca y "Día clave". Azul `#0066FF`: "Hoy" y el trazo inferior de las tarjetas neutras.
+- Rosa `#FF0A54`: marca y "Día clave". Azul `#0066FF` también para la etiqueta "Hoy" y la numeración dentro de la cápsula blanca.
 - Trazos gruesos de 2 px, iguales en todos los lados de cada cápsula.
 - Botones a TikTok e Instagram en cabecera y pie.
 - Tipografías: Raleway (titulares y texto), Space Grotesk (etiquetas, fechas y SIEMPRE todos los números, también dentro del texto), Playfair Display cursiva (palabra destacada).
 - Pensado primero para móvil: en pantallas estrechas la fila de días queda fija arriba mientras se lee.
+
+## Proceso semanal
+
+1. Cada lunes se pasa el documento de "Novedades de mercado" de la semana.
+2. Se crea `semanas/AAAA-MM-DD/` (fecha del lunes) con `semana.json` y `dias.js`, manteniendo toda la información del documento sin quitar nada: datos de cada día, qué puede pasar según el resultado (con "suele"), IA, "Con qué quedarse" y fuentes.
+3. Se ejecuta `python3 plantilla/generar.py`, se revisa la vista previa a 390 px y en escritorio, y se sube tras el visto bueno.
+4. No se toca el diseño salvo que se pida: la plantilla y la guía en `docs/` mandan.

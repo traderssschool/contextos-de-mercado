@@ -40,8 +40,11 @@ Nota: el script usa `semanas/AAAA-MM-DD/` para ordenar, así que la semana con l
 ## Guía visual (brand TBS)
 
 - Fondo negro `#121214` con cuadrícula fina y cruces, como la web.
-- Verde `#11E07F`: contenido formativo e informativo (la cápsula del día abierto), botones y palabras destacadas. Dentro de la cápsula, solo variantes de ese verde.
+- Verde `#11E07F`: solo para encapsular el contenido formativo (la cápsula del día abierto) y el texto y botones de dentro. Nunca para destacar palabras sueltas. Dentro de la cápsula, solo variantes de ese verde.
+- Blanco: cápsula de "Con qué quedarse" y "Las tres preguntas". Palabra destacada en cursiva: mismo color que el titular.
+- Acabados mate: colores sólidos, sin brillos ni sombras de color.
 - Rosa `#FF0A54`: marca y "Día clave". Azul `#0066FF`: "Hoy" y el trazo inferior de las tarjetas neutras.
-- Trazos gruesos: bordes de 2 px y trazo inferior de 3–4 px en tarjetas.
+- Trazos gruesos de 2 px, iguales en todos los lados de cada cápsula.
+- Botones a TikTok e Instagram en cabecera y pie.
 - Tipografías: Raleway (titulares), Space Grotesk (etiquetas y fechas), Playfair Display cursiva (palabra destacada).
 - Pensado primero para móvil: en pantallas estrechas la fila de días queda fija arriba mientras se lee.

@@ -18,6 +18,26 @@ MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
 
+PREGUNTAS_POR_DEFECTO = [
+    "¿Qué esperaba el mercado?",
+    "¿Qué dato hemos recibido?",
+    "¿Qué cambia después de conocerlo?",
+]
+FUENTES_POR_DEFECTO = "calendarios económicos internacionales."
+
+
+def comunidad(pregunta) -> str:
+    """Bloque opcional con la pregunta para la comunidad, dentro de la cápsula blanca."""
+    if not pregunta:
+        return ""
+    opciones = "".join(f"<li>{html.escape(o)}</li>" for o in pregunta.get("opciones", []))
+    return (
+        '\n      <div class="poll"><h3>' + html.escape(pregunta["texto"]) + "</h3>"
+        + (f"<ul>{opciones}</ul>" if opciones else "")
+        + "<p>Cuéntanoslo en la comunidad de Telegram.</p></div>"
+    )
+
+
 def pagina_semana(carpeta: Path, enlace_archivo: str) -> str:
     datos = json.loads((carpeta / "semana.json").read_text(encoding="utf-8"))
     dias = (carpeta / "dias.js").read_text(encoding="utf-8").strip()
@@ -31,7 +51,15 @@ def pagina_semana(carpeta: Path, enlace_archivo: str) -> str:
         "CON_QUE_QUEDARSE": quedarse,
         "DAYS": dias,
         "ARCHIVO": enlace_archivo,
+        "PREGUNTAS": "\n        ".join(
+            f'<li><span>{i:02d}</span>{html.escape(q)}</li>'
+            for i, q in enumerate(datos.get("preguntas", PREGUNTAS_POR_DEFECTO), 1)
+        ),
+        "COMUNIDAD": comunidad(datos.get("pregunta_comunidad")),
+        "FUENTES": html.escape(datos.get("fuentes", FUENTES_POR_DEFECTO)),
     }
+    # Espacio fijo entre la cifra y el símbolo de porcentaje, para que no se separen al cortar la línea.
+    valores = {k: v.replace(" %", "\u00a0%") for k, v in valores.items()}
     salida = PLANTILLA
     for clave, valor in valores.items():
         salida = salida.replace("{{" + clave + "}}", valor)
@@ -46,6 +74,11 @@ def num(texto: str) -> str:
     return re.sub(r"\d+(?:[.,]\d+)*", lambda m: f'<span class="n">{m.group(0)}</span>', texto)
 
 
+def fijo(texto: str) -> str:
+    """Evita que el símbolo % se separe de su cifra."""
+    return texto.replace(" %", "\u00a0%")
+
+
 def pagina_archivo(semanas) -> str:
     filas = []
     for i, carpeta in enumerate(semanas):
@@ -57,7 +90,7 @@ def pagina_archivo(semanas) -> str:
             f'<li><a href="../semanas/{carpeta.name}/">'
             f'<span class="fecha">{fecha}</span>'
             f'<span class="texto"><strong>{num(html.escape(datos["rango"]))}</strong>'
-            f'<span>{num(html.escape(datos.get("resumen_archivo", "")))}</span></span>{actual}</a></li>'
+            f'<span>{fijo(num(html.escape(datos.get("resumen_archivo", ""))))}</span></span>{actual}</a></li>'
         )
     lista = "\n      ".join(filas)
     return f"""<!doctype html>
@@ -86,7 +119,7 @@ a:focus-visible{{outline:2px solid #fff;outline-offset:3px}}
 .texto{{display:flex;flex-direction:column;gap:2px}}
 .texto strong{{font-weight:800;font-size:18px}}
 .n{{font-family:"Space Grotesk",sans-serif;font-variant-numeric:tabular-nums}}
-.texto span{{color:var(--fg-3);font-size:15px}}
+.texto > span{{color:var(--fg-3);font-size:15px}}
 .tag{{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;padding:5px 10px;border-radius:40px;border:1.5px solid var(--brand);background:rgba(255,10,84,.14);white-space:nowrap}}
 @media (max-width:600px){{li a{{grid-template-columns:minmax(0,1fr)}}.tag{{justify-self:start}}}}
 </style>

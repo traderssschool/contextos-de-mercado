@@ -8,5 +8,21 @@
   "con_que_quedarse": [
     "La Fed ya tomó su última decisión de tipos. Ahora llegan los datos que dirán si encaja con lo que está pasando: primero inflación, después actividad empresarial y por último empleo. Mientras, Europa comprueba si su inflación se modera y China dice si su economía gana fuerza.",
     "Esta semana conviene seguir: <b>inflación, empleo, China, bonos e inteligencia artificial</b>. Ningún dato es bueno o malo por sí solo. Un empleo muy fuerte muestra una economía resistente, pero puede traer tipos altos más tiempo. Una inflación más baja da tranquilidad a los bancos centrales; una más alta vuelve a poner los tipos en el foco."
-  ]
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué dato hemos recibido?",
+    "¿Qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué creéis que será más importante esta semana?",
+    "opciones": [
+      "El empleo de Estados Unidos",
+      "La inflación PCE",
+      "La inflación europea",
+      "Los datos de China",
+      "Las novedades de la inteligencia artificial"
+    ]
+  },
+  "fuentes": "BLS (empleo EE. UU.), BEA (PCE y PIB), Eurostat (inflación eurozona), OpenAI (novedades de ChatGPT) y calendarios económicos internacionales."
 }

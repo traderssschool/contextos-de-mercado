@@ -129,7 +129,7 @@ h1{margin:0;font-family:var(--font-primary);font-weight:800;font-size:clamp(34px
 .event p{margin:0;max-width:68ch}
 .why{color:rgba(214,250,231,.72);font-size:15px}
 .scen{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:8px}
-.scen li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:baseline;background:var(--green-fill-2);border:var(--stroke) solid rgba(17,224,127,.5);border-radius:12px;padding:12px 16px;font-size:15px}
+.scen li{display:grid;grid-template-columns:190px minmax(0,1fr);gap:14px;align-items:baseline;background:var(--green-fill-2);border:var(--stroke) solid rgba(17,224,127,.5);border-radius:12px;padding:12px 16px;font-size:15px}
 .scen .if{font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--green-text)}
 .watch{font-size:15px;color:rgba(214,250,231,.72)}
 .watch b{color:var(--fg-1);font-weight:700}
@@ -150,6 +150,11 @@ h1{margin:0;font-family:var(--font-primary);font-weight:800;font-size:clamp(34px
 .qs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
 .qs li{display:flex;gap:14px;align-items:center;background:var(--paper-2);border:var(--stroke) solid var(--paper-line);border-radius:16px;padding:14px 18px;font-weight:700;color:var(--ink)}
 .qs li span{font-family:var(--font-ui);font-weight:700;font-size:15px;color:var(--blue);font-variant-numeric:tabular-nums}
+.poll{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.poll h3{margin:0;font-weight:800;font-size:18px;line-height:1.3;letter-spacing:-.01em;color:var(--ink)}
+.poll ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.poll li{border:var(--stroke) solid var(--paper-line);border-radius:44px;padding:8px 14px;font-weight:700;font-size:14px;color:var(--ink)}
+.poll p{margin:0;font-size:14px;color:var(--ink-2)}
 .foot{border-top:var(--stroke) solid var(--line);padding-top:18px;font-family:var(--font-ui);font-size:13px;color:var(--fg-3);display:flex;flex-direction:column;gap:12px}
 .archive{align-self:flex-start;color:var(--fg-1);font-family:var(--font-primary);font-weight:800;font-size:15px;text-decoration:none;border:var(--stroke) solid var(--line-strong);border-radius:44px;padding:11px 20px}
 .archive:hover{border-color:var(--fg-1)}
@@ -223,6 +228,7 @@ h1{margin:0;font-family:var(--font-primary);font-weight:800;font-size:clamp(34px
         <li><span>02</span>¿Qué dato hemos recibido?</li>
         <li><span>03</span>¿Qué cambia después de conocerlo?</li>
       </ol>
+      <div class="poll"><h3>¿Qué creéis que será más importante esta semana?</h3><ul><li>El empleo de Estados Unidos</li><li>La inflación PCE</li><li>La inflación europea</li><li>Los datos de China</li><li>Las novedades de la inteligencia artificial</li></ul><p>Cuéntanoslo en la comunidad de Telegram.</p></div>
     </div>
   </section>
 
@@ -302,11 +308,11 @@ const DAYS = [
     intro:"Probablemente la noticia más importante de la semana, y el mismo día la inflación de la eurozona.",
     events:[
       {region:"EE. UU.", title:"Informe de empleo de septiembre", main:true,
-       text:"Puestos de trabajo creados, evolución del paro y salarios. En agosto los salarios subieron un 3,1 % interanual, y junio y julio se revisaron al alza en 55.000 empleos. El mercado quiere ver si esa fortaleza sigue.",
+       text:"Puestos de trabajo creados, evolución del paro y salarios. En agosto los salarios subieron un 3,1 % interanual, y junio y julio se revisaron al alza en 55.000 empleos. El mercado quiere ver si esa fortaleza sigue.",
        scen:[["Muy fuerte","Buena noticia para la economía, pero refuerza los tipos altos más tiempo. Suele traer bonos y dólar al alza y presión en bolsa."],["Se enfría algo","Reduce la presión sobre la Fed para seguir subiendo tipos. Suele ser el escenario que mejor recibe el mercado."],["Se deteriora mucho","Crece el miedo a una desaceleración y suele pesar en bolsa."]]},
       {region:"UE", title:"IPC preliminar de la eurozona", main:true,
-       text:"En agosto la inflación subió al 3,3 %, desde el 2,9 % de julio, con la energía como principal presión. El BCE quiere acercarla al 2 % sin frenar demasiado una economía que crece despacio.",
-       scen:[["Si baja","Se reduce la presión sobre el BCE. Suele ser bueno para la bolsa europea y los bonos."],["Si sigue en el 3 % o sube","El BCE tiene menos margen para relajar. Suele apoyar al euro y a la banca y pesar en el resto de la bolsa."]],
+       text:"En agosto la inflación subió al 3,3 %, desde el 2,9 % de julio, con la energía como principal presión. El BCE quiere acercarla al 2 % sin frenar demasiado una economía que crece despacio.",
+       scen:[["Si baja","Se reduce la presión sobre el BCE. Suele ser bueno para la bolsa europea y los bonos."],["Si sigue en el 3 % o sube","El BCE tiene menos margen para relajar. Suele apoyar al euro y a la banca y pesar en el resto de la bolsa."]],
        watch:"Qué mirar: <b>euro, bonos europeos, bancos y principales bolsas de Europa</b>."},
       {region:"JP", title:"Datos de empleo de Japón", main:true,
        text:"Completan la foto de una economía que intenta salir de los tipos ultrabajos."}

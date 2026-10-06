@@ -1,0 +1,29 @@
+{
+  "titulo": "Calendario de mercado · 5 – 9 oct",
+  "rango": "Semana del 5 al 9 de octubre",
+  "h1_inicio": "Bolsa contra",
+  "h1_cursiva": "bonos",
+  "resumen_archivo": "Actas de la Fed, bonos por encima del 5 %, petróleo, Francia e IA.",
+  "entradilla": "El último empleo de EE. UU. fue más débil de lo esperado y ha reducido el miedo a nuevas subidas inmediatas de tipos. Pero <strong>el bono a 10 años sigue por encima del 5 %</strong> y <strong>el petróleo, alrededor de los 100 dólares</strong>. Pulsa cada día para abrirlo.",
+  "con_que_quedarse": [
+    "Esta semana hay menos grandes publicaciones que la anterior, pero cinco historias que merece la pena seguir: <b>Reserva Federal, bonos, petróleo, Europa e inteligencia artificial</b>.",
+    "El mercado empieza la semana pensando que la Fed podría tener menos necesidad de seguir subiendo tipos tras un empleo más débil. El problema: los bonos estadounidenses siguen ofreciendo rentabilidades muy elevadas y el petróleo continúa alrededor de los 100 dólares. Al mismo tiempo, Europa vuelve a tener preocupaciones políticas y fiscales con Francia, y la carrera por la IA sigue acelerándose y necesitando cantidades enormes de dinero.",
+    "La pregunta de la semana: <b>¿puede la bolsa seguir avanzando si los bonos continúan ofreciendo rentabilidades superiores al 5 %?</b> No hace falta adivinar la respuesta. Lo interesante será ver cómo reaccionan los mercados a cada nueva información."
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué ha ocurrido realmente?",
+    "¿Y qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué tema creéis que puede tener más importancia esta semana?",
+    "opciones": [
+      "Las actas de la Reserva Federal",
+      "Los bonos estadounidenses por encima del 5 %",
+      "El petróleo",
+      "Los problemas de Francia y Europa",
+      "La carrera de inversión en inteligencia artificial"
+    ]
+  },
+  "fuentes": "Bureau of Labor Statistics (BLS), Federal Reserve, Kiplinger Economic Calendar, The Wall Street Journal, MarketWatch, Barron's, Associated Press y OpenAI."
+}

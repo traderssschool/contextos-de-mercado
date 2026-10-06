@@ -25,6 +25,10 @@ plantilla/generar.py        → genera todas las páginas
 3. Ejecutar `python3 plantilla/generar.py` desde la raíz del repositorio.
 4. Subir los cambios. GitHub Pages publica en uno o dos minutos.
 
+### Campos de `semana.json`
+
+`titulo`, `rango`, `h1_inicio`, `h1_cursiva`, `resumen_archivo`, `entradilla` (admite `<strong>`), `con_que_quedarse` (lista de párrafos, admite `<b>`), `preguntas` (las tres preguntas), `pregunta_comunidad` (`texto` y `opciones`) y `fuentes`.
+
 ### Formato de `dias.js`
 
 Un array `DAYS` con cinco días (lunes a viernes). Cada día tiene:

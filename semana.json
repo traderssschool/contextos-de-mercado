@@ -1,0 +1,29 @@
+{
+  "titulo": "Calendario de mercado · 12 – 16 oct",
+  "rango": "Semana del 12 al 16 de octubre",
+  "h1_inicio": "La inflación vuelve a",
+  "h1_cursiva": "mandar",
+  "resumen_archivo": "IPC de EE. UU., arranque de resultados, dudas con la IA, China y Europa.",
+  "entradilla": "Tres grandes frentes: <strong>inflación en EE. UU.</strong>, <strong>resultados empresariales</strong> y nuevas señales sobre China, Europa y la inversión en inteligencia artificial. Además, el petróleo y los bonos siguen en niveles que pueden condicionar a las bolsas. Pulsa cada día para abrirlo.",
+  "con_que_quedarse": [
+    "Esta semana hay tres grandes preguntas: <b>¿está bajando de verdad la inflación estadounidense?</b>, <b>¿siguen ganando las empresas suficiente dinero para justificar las valoraciones actuales?</b> y <b>¿se sigue justificando económicamente la enorme inversión en IA?</b>",
+    "Todo ocurre con el petróleo todavía elevado y los bonos estadounidenses ofreciendo rentabilidades muy altas. Por eso esta semana es especialmente importante no mirar solo si el mercado sube o baja."
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué dato o resultado hemos recibido?",
+    "¿Qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué creéis que puede tener más impacto en los mercados esta semana?",
+    "opciones": [
+      "La inflación de Estados Unidos",
+      "Los resultados de los grandes bancos",
+      "ASML, TSMC y la demanda de chips",
+      "Las dudas alrededor de la inversión en IA",
+      "Los datos de China",
+      "El petróleo y los bonos"
+    ]
+  },
+  "fuentes": "calendario económico y de resultados de la semana, Fondo Monetario Internacional (FMI) y Reserva Federal."
+}

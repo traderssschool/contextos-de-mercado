@@ -1,0 +1,30 @@
+{
+  "titulo": "Calendario de mercado · 19 – 23 oct",
+  "rango": "Semana del 19 al 23 de octubre",
+  "h1_inicio": "De expectativas a",
+  "h1_cursiva": "números",
+  "resumen_archivo": "PIB de China, Tesla, Meta e IBM, inflación británica, IA y petróleo.",
+  "entradilla": "EE. UU. tiene pocos grandes datos esta semana, así que el foco se desplaza a <strong>China, los resultados, la IA, Reino Unido, los bonos y el petróleo</strong>. De fondo, la inflación estadounidense subió al 3,7 % en septiembre y la Fed se reúne los días 27 y 28 de octubre. Pulsa cada día para abrirlo.",
+  "con_que_quedarse": [
+    "No hay una única noticia que lo domine todo, sino varias historias conectadas.",
+    "<b>China</b> crece un 4,5 %, pero con una diferencia enorme entre su capacidad industrial y la debilidad del consumo y la inversión. En <b>EE. UU.</b>, la inflación ha vuelto al 3,7 % y la Fed se reúne la próxima semana. En <b>bolsa</b>, Netflix, Tesla, Meta, IBM y muchas otras tendrán que demostrar que sus negocios justifican las expectativas.",
+    "En <b>inteligencia artificial</b> seguimos viendo un enorme crecimiento, pero cada vez importa más cuánto beneficio generan las inversiones. Y el <b>petróleo</b> baja, pero sigue lo bastante alto como para influir en la inflación.",
+    "La pregunta de la semana: <b>¿pueden los beneficios de las empresas crecer lo suficiente como para compensar unos tipos, unos bonos y unos costes energéticos tan elevados?</b> No hace falta adivinar la respuesta: toca observar los datos."
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué ha ocurrido realmente?",
+    "¿Y qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué noticia creéis que puede ser más importante esta semana?",
+    "opciones": [
+      "Los datos de China",
+      "Los resultados de Tesla y Meta",
+      "El futuro de la inversión en inteligencia artificial",
+      "La inflación de Reino Unido",
+      "El petróleo y los bonos"
+    ]
+  },
+  "fuentes": "National Bureau of Statistics of China (nota de prensa del 19 de octubre y datos industriales), U.S. Bureau of Labor Statistics (IPC de septiembre), Wall Street Journal (rentabilidad de los bonos del Tesoro), relaciones con inversores de Netflix, Tesla y Meta, IBM Newsroom, OpenAI, UK Office for National Statistics (calendario y ventas minoristas) y Bank of Japan (calendario)."
+}

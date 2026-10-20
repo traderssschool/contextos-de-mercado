@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}</style>
+<title>Calendario de mercado · 19 – 23 oct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=Raleway:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: TBS web system. Grid-and-crosses background, logo + headline, five day cards with a thick bottom stroke,
+   the open day in a green "formación" capsule, takeaway cards. Single dark theme by brand choice.
+   Color roles: pink = brand/"Día clave", blue = "Hoy" + neutral cards' stroke, green #11E07F = teaching content, buttons, highlighted words. */
+:root{
+  color-scheme:dark;
+  --page:#121214;
+  --card:#1F1E23;
+  --raised:#26252B;
+  --fg-1:#FFFFFF;
+  --fg-2:#F7F7F7;
+  --fg-3:rgba(255,255,255,.68);
+  --line:rgba(255,255,255,.14);
+  --line-strong:rgba(255,255,255,.34);
+  --brand:#FF0A54;
+  --brand-soft:rgba(255,10,84,.16);
+  --blue:#0066FF;
+  --blue-text:#7DB2FF;
+  --blue-soft:rgba(0,102,255,.22);
+  --green:#11E07F;
+  --green-pale:#A8F5CE;
+  --green-text:#5CEFA8;
+  --green-ink:#04331C;
+  --green-fill:#0E2A1D;
+  --green-block:#12352A;
+  --paper:#FFFFFF;
+  --paper-2:#F4F4F5;
+  --ink:#1F1E23;
+  --ink-2:#62636B;
+  --paper-line:rgba(31,30,35,.14);
+  --green-fill-2:#154A33;
+  --green-line:#11E07F;
+  --grid:rgba(255,255,255,.055);
+  --font-primary:"Raleway", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --font-ui:"Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --stroke:2px;
+}
+*{box-sizing:border-box}
+html{background:var(--page)}
+body{
+  background-color:var(--page);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152'%3E%3Cpath d='M76 69v14M69 76h14' stroke='%23ffffff' stroke-opacity='.26' stroke-width='1.2'/%3E%3C/svg%3E"),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:152px 152px, 38px 38px, 38px 38px;
+  background-position:-76px -76px, 0 0, 0 0;
+  color:var(--fg-2);font-family:var(--font-primary);font-size:16px;line-height:1.5;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:20px 56px;display:flex;flex-direction:column;gap:28px}
+
+/* Header */
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brandbar .logo svg{height:30px;width:auto;display:block}
+.social{display:flex;gap:8px;flex-wrap:wrap}
+.social a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:44px;border:var(--stroke) solid var(--line-strong);color:var(--fg-1);text-decoration:none;font-family:var(--font-primary);font-weight:800;font-size:14px;letter-spacing:-.01em;transition:border-color .12s var(--ease), background-color .12s var(--ease)}
+.social a:hover{border-color:var(--fg-1);background:rgba(255,255,255,.06)}
+.social a:focus-visible{outline:2px solid var(--fg-1);outline-offset:3px}
+.social svg{width:18px;height:18px;flex:none}
+.foot-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:40px;font-family:var(--font-ui);font-weight:700;font-size:12px;line-height:1;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;border:var(--stroke) solid}
+.tag-brand{background:var(--brand-soft);border-color:var(--brand);color:var(--fg-1)}
+.tag-blue{background:var(--blue-soft);border-color:var(--blue);color:var(--blue-text)}
+.tag-neutral{background:transparent;border-color:var(--line-strong);color:var(--fg-3);padding:4px 9px;font-size:11px}
+.tag-green{background:var(--green-fill-2);border-color:var(--green);color:var(--green-text);padding:4px 9px;font-size:11px}
+.hero{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding-top:8px}
+.range{font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--fg-3)}
+h1{margin:0;font-family:var(--font-primary);font-weight:800;font-size:clamp(34px,6.4vw,60px);line-height:1.02;letter-spacing:-.02em;color:var(--fg-1);text-wrap:balance}
+.serif{font-family:var(--font-serif);font-style:italic;font-weight:400;color:inherit;letter-spacing:-.04em;font-size:1.12em}
+.lede{margin:0;max-width:60ch;font-size:18px;color:var(--fg-3);text-wrap:pretty}
+.lede strong{color:var(--fg-1);font-weight:700}
+
+/* Week strip */
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.day{
+  appearance:none;font:inherit;text-align:left;cursor:pointer;min-width:0;
+  background:var(--card);color:var(--fg-1);
+  border:var(--stroke) solid var(--line);border-radius:16px;
+  padding:16px;display:flex;flex-direction:column;gap:10px;
+  transition:border-color .2s var(--ease), background-color .2s var(--ease), transform .12s var(--ease);
+}
+.day:hover{border-color:var(--line-strong)}
+.day:active{transform:scale(.98)}
+.day:focus-visible,.nav button:focus-visible,.archive:focus-visible{outline:2px solid var(--fg-1);outline-offset:3px}
+.day-top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.dow{font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--fg-3)}
+.state{font-family:var(--font-ui);font-weight:500;font-size:12px;color:var(--fg-3);display:inline-flex;align-items:center;gap:5px}
+.state::before{content:"";width:7px;height:7px;border-radius:50%;border:1.5px solid currentColor}
+.date{display:flex;align-items:baseline;gap:6px}
+.num{font-family:var(--font-ui);font-weight:700;font-size:44px;line-height:.95;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.mon{font-family:var(--font-ui);font-weight:700;font-size:13px;text-transform:uppercase;color:var(--fg-3)}
+.badges{display:flex;gap:6px;flex-wrap:wrap;min-height:24px}
+.badges .tag{padding:5px 9px;font-size:11px}
+.teaser{font-weight:700;font-size:15px;line-height:1.3;letter-spacing:-.01em;color:var(--fg-2);text-wrap:balance}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:2px}
+.day[aria-pressed="true"]{background:var(--raised);border-color:var(--fg-1)}
+.day[aria-pressed="true"] .state{color:var(--fg-1)}
+.day[aria-pressed="true"] .state::before{background:currentColor}
+
+/* Open day: green teaching capsule */
+.sheet{
+  background:var(--green-fill);
+  border:var(--stroke) solid var(--green-line);border-radius:24px;
+  padding:32px;display:flex;flex-direction:column;gap:28px;
+}
+.sheet-head{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.eyebrow{font-family:var(--font-ui);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-text);border:var(--stroke) solid var(--green-line);border-radius:8px;padding:5px 9px}
+.sheet h2{margin:0;font-weight:800;font-size:clamp(26px,3.6vw,38px);line-height:1.08;letter-spacing:-.02em;color:var(--green-pale);text-wrap:balance}
+.intro{margin:0;max-width:64ch;font-size:17px;color:rgba(214,250,231,.72)}
+.events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.event{display:flex;flex-direction:column;gap:10px;min-width:0;padding:20px;background:var(--green-block);border:var(--stroke) solid rgba(17,224,127,.35);border-radius:16px}
+.event.main{grid-column:1/-1}
+.ev-head{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.ev-head .tag-neutral{border-width:var(--stroke);border-color:var(--green-line);color:var(--green-text)}
+.event h3{margin:0;font-weight:800;font-size:20px;line-height:1.25;letter-spacing:-.015em;color:var(--green-pale)}
+.event p{margin:0;max-width:68ch}
+.why{color:rgba(214,250,231,.72);font-size:15px}
+.scen{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:8px}
+.scen li{display:grid;grid-template-columns:190px minmax(0,1fr);gap:14px;align-items:baseline;background:var(--green-fill-2);border:var(--stroke) solid rgba(17,224,127,.5);border-radius:12px;padding:12px 16px;font-size:15px}
+.scen .if{font-family:var(--font-ui);font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:var(--green-text)}
+.watch{font-size:15px;color:rgba(214,250,231,.72)}
+.watch b{color:var(--fg-1);font-weight:700}
+.nav{display:flex;justify-content:space-between;gap:12px;padding-top:4px}
+.nav button{appearance:none;cursor:pointer;min-height:46px;padding:0 22px;border-radius:44px;font-family:var(--font-primary);font-weight:800;font-size:15px;letter-spacing:-.01em;transition:background-color .12s var(--ease), border-color .12s var(--ease), color .12s var(--ease)}
+#prev{background:transparent;border:var(--stroke) solid var(--green-line);color:var(--green-text)}
+#prev:hover:not([disabled]){border-color:var(--green);color:var(--green)}
+#next{background:var(--green);border:var(--stroke) solid var(--green);color:var(--green-ink)}
+#next:hover:not([disabled]){background:#3DE899;border-color:#3DE899}
+.nav button[disabled]{opacity:.35;cursor:not-allowed}
+
+/* Takeaway */
+.takeaway{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;background:var(--paper);color:var(--ink);border:var(--stroke) solid var(--paper);border-radius:24px;padding:36px}
+.takeaway h2{margin:0 0 14px;font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.02em;color:var(--ink)}
+.takeaway p{margin:0 0 12px;max-width:62ch;color:var(--ink-2)}
+.takeaway p:last-child{margin-bottom:0}
+.takeaway p b{color:var(--ink);font-weight:700}
+.qs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.qs li{display:flex;gap:14px;align-items:center;background:var(--paper-2);border:var(--stroke) solid var(--paper-line);border-radius:16px;padding:14px 18px;font-weight:700;color:var(--ink)}
+.qs li span{font-family:var(--font-ui);font-weight:700;font-size:15px;color:var(--blue);font-variant-numeric:tabular-nums}
+.poll{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.poll h3{margin:0;font-weight:800;font-size:18px;line-height:1.3;letter-spacing:-.01em;color:var(--ink)}
+.poll ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.poll li{border:var(--stroke) solid var(--paper-line);border-radius:44px;padding:8px 14px;font-weight:700;font-size:14px;color:var(--ink)}
+.poll p{margin:0;font-size:14px;color:var(--ink-2)}
+.foot{border-top:var(--stroke) solid var(--line);padding-top:18px;font-family:var(--font-ui);font-size:13px;color:var(--fg-3);display:flex;flex-direction:column;gap:12px}
+.archive{align-self:flex-start;color:var(--fg-1);font-family:var(--font-primary);font-weight:800;font-size:15px;text-decoration:none;border:var(--stroke) solid var(--line-strong);border-radius:44px;padding:11px 20px}
+.archive:hover{border-color:var(--fg-1)}
+
+.n{font-family:var(--font-ui);font-weight:inherit;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.fade{animation:fade .28s var(--ease) both}
+@keyframes fade{from{opacity:.001;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.n{font-family:var(--font-ui);font-weight:inherit;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.fade{animation:none}.day,.nav button{transition:none}.day:active{transform:none}}
+
+/* Phone first-class: most readers open this from Telegram */
+@media (max-width:780px){
+  .wrap{gap:22px;padding-block:16px 40px}
+  h1{font-size:clamp(30px,9vw,40px)}
+  .lede{font-size:16px}
+  .week{gap:6px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;padding-block:8px;margin-block:-8px;background:linear-gradient(var(--page) 85%,rgba(18,18,20,0))}
+  .day{padding:10px 2px 8px;align-items:center;text-align:center;gap:4px;border-radius:14px;min-height:74px}
+  .day-top{justify-content:center}
+  .state,.teaser,.tags{display:none}
+  .date{flex-direction:column;align-items:center;gap:1px}
+  .num{font-size:26px}
+  .mon,.dow{font-size:11px}
+  .badges{justify-content:center;min-height:0}
+  .badges .tag{padding:2px 5px;font-size:9px;border-width:1.5px}
+  .sheet{padding:20px 14px;border-radius:20px;gap:22px;scroll-margin-top:100px}
+  .events{grid-template-columns:minmax(0,1fr);gap:10px}
+  .event{padding:16px 14px}
+  .event h3{font-size:18px}
+  .scen li{grid-template-columns:minmax(0,1fr);gap:4px;padding:10px 12px}
+  .nav button{flex:1;padding:0 12px;font-size:14px}
+  .takeaway{grid-template-columns:minmax(0,1fr);gap:28px;padding:24px 18px;border-radius:20px}
+  .takeaway h2{font-size:26px}
+}
+@media (max-width:480px){ .brandbar{flex-wrap:nowrap} .brandbar .social .txt{display:none} .brandbar .social a{width:44px;min-height:44px;padding:0;justify-content:center} }
+@media (max-width:380px){ .badges .long{display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brandbar">
+    <span class="logo" role="img" aria-label="Traders Business School"><svg aria-hidden="true" focusable="false" width="123" height="41" viewBox="0 0 123 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M113.384 34.0695C113.794 34.0695 114.127 33.737 114.127 33.3269V31.7463C114.127 31.4743 113.978 31.224 113.739 31.094L95.5232 21.1791C95.2843 21.0491 95.1357 20.7988 95.1357 20.5268V13.4004C95.1357 13.2049 95.2127 13.0173 95.3502 12.8783L100.146 8.02717C100.286 7.88607 100.476 7.80666 100.674 7.80666H116.523C116.72 7.80666 116.909 7.8849 117.049 8.02416L121.902 12.8778C122.041 13.017 122.12 13.2059 122.12 13.4029V17.5211C122.12 17.9312 121.787 18.2637 121.377 18.2637H114.749C114.339 18.2637 114.006 17.9312 114.006 17.5211V14.9197C114.006 14.5095 113.674 14.177 113.264 14.177H104.352C103.942 14.177 103.609 14.5095 103.609 14.9197V16.4996C103.609 16.7719 103.759 17.0224 103.998 17.1523L122.272 27.0676C122.511 27.1975 122.661 27.448 122.661 27.7204V34.8436C122.661 35.0406 122.582 35.2295 122.443 35.3688L117.589 40.2224C117.45 40.3616 117.261 40.4399 117.064 40.4399H100.552C100.355 40.4399 100.166 40.3616 100.026 40.2224L95.1729 35.3688C95.0336 35.2295 94.9554 35.0406 94.9554 34.8436V31.086C94.9554 30.6759 95.2878 30.3434 95.698 30.3434H102.266C102.676 30.3434 103.008 30.6759 103.008 31.086V33.3269C103.008 33.737 103.341 34.0695 103.751 34.0695H113.384Z" fill="white"></path>
+<path d="M71.9587 1.61165C71.9587 1.20151 71.6262 0.869033 71.216 0.869033H64.1073C63.6971 0.869033 63.3647 1.20151 63.3647 1.61165V39.6965C63.3647 40.1066 63.6971 40.4391 64.1073 40.4391H70.2545C70.6646 40.4391 70.9971 40.1066 70.9971 39.6965V38.5267C70.9971 37.8621 71.803 37.5321 72.2691 38.0058L74.4449 40.2173C74.5845 40.3592 74.7752 40.4391 74.9742 40.4391H86.0721C86.2705 40.4391 86.4607 40.3597 86.6002 40.2186L91.3962 35.3674C91.5336 35.2284 91.6107 35.0408 91.6107 34.8453V13.3996C91.6107 13.2041 91.5336 13.0165 91.3962 12.8775L86.6002 8.02638C86.4607 7.88527 86.2705 7.80586 86.0721 7.80586H72.7013C72.2911 7.80586 71.9587 7.47338 71.9587 7.06324V1.61165ZM83.0167 31.7034C83.0167 32.1136 82.6842 32.446 82.2741 32.446H74.411C74.2252 32.446 74.0462 32.3764 73.9092 32.2508L72.1995 30.6836C72.046 30.5429 71.9587 30.3443 71.9587 30.1361V16.3011C71.9587 15.891 72.2911 15.5585 72.7013 15.5585H84.5254C85.4172 15.5585 85.5518 16.8427 84.6794 17.0276L83.6053 17.2552C83.2622 17.328 83.0167 17.6309 83.0167 17.9817V31.7034Z" fill="white"></path>
+<path d="M58.6788 39.6969C58.6788 40.1071 58.3463 40.4396 57.9362 40.4396H46.7865C46.5896 40.4396 46.4007 40.3613 46.2614 40.2221L41.4078 35.3684C41.2685 35.2292 41.1903 35.0403 41.1903 34.8433V15.4001C41.1903 14.99 40.8578 14.6575 40.4477 14.6575H37.666C37.2558 14.6575 36.9233 14.325 36.9233 13.9149V8.54896C36.9233 8.13883 37.2558 7.80634 37.666 7.80634H40.4477C40.8578 7.80634 41.1903 7.47386 41.1903 7.06373V1.57759C41.1903 1.16746 41.5228 0.834976 41.9329 0.834976H49.0417C49.4518 0.834976 49.7843 1.16746 49.7843 1.57759V7.06373C49.7843 7.47386 50.1168 7.80634 50.5269 7.80634H57.4554C57.8655 7.80634 58.198 8.13883 58.198 8.54896V13.9149C58.198 14.325 57.8655 14.6575 57.4554 14.6575H48.7968C47.9827 14.6575 47.7619 15.7786 48.5153 16.0873L49.3233 16.4184C49.6022 16.5327 49.7843 16.8042 49.7843 17.1056V31.7039C49.7843 32.114 50.1168 32.4465 50.5269 32.4465H57.9362C58.3463 32.4465 58.6788 32.779 58.6788 33.1891V39.6969Z" fill="white"></path>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.807967 0.834961H15.4125L15.3822 5.21903H5.16171V27.1866C5.92328 26.8934 6.75224 26.735 7.6149 26.735H26.644V16.8683H30.9977V31.0887H7.6149C6.39841 31.0887 5.38074 31.9615 5.16171 33.114V34.0575C5.38074 35.2133 6.39841 36.0861 7.6149 36.0861H30.9708V40.4399H7.6149C3.83065 40.4399 0.76416 37.3734 0.76416 33.5857C0.76416 22.634 0.807967 11.7901 0.807967 0.834961ZM18.442 0.834961H31.0011V13.8221H26.6474V8.35292L18.4116 16.5886L15.3317 13.5087L23.5674 5.21566H18.442V0.834961Z" fill="#FF0A54"></path>
+</svg></span>
+    <nav class="social" aria-label="Redes sociales"><a href="https://www.tiktok.com/@tradersbs" target="_blank" rel="noopener" aria-label="TikTok de Traders Business School"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.2c-1.4.1-2.7-.3-3.9-1v6.2c0 3.4-2.5 5.7-5.6 5.7-3.2 0-5.6-2.5-5.4-5.7.2-2.9 2.6-5 5.6-4.9v3.3c-1.2-.2-2.3.5-2.4 1.7-.1 1.2.8 2.2 2 2.2 1.3 0 2.2-.9 2.2-2.4V3h3.6z"/></svg><span class="txt">TikTok</span></a><a href="https://www.instagram.com/traders_business_school/" target="_blank" rel="noopener" aria-label="Instagram de Traders Business School"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg><span class="txt">Instagram</span></a></nav>
+  </div>
+
+  <header class="hero">
+    <span class="tag tag-brand">Novedades de mercado</span>
+    <span class="range">Semana del 19 al 23 de octubre</span>
+    <h1>De expectativas a <span class="serif">números</span></h1>
+    <p class="lede">EE. UU. tiene pocos grandes datos esta semana, así que el foco se desplaza a <strong>China, los resultados, la IA, Reino Unido, los bonos y el petróleo</strong>. De fondo, la inflación estadounidense subió al 3,7 % en septiembre y la Fed se reúne los días 27 y 28 de octubre. Pulsa cada día para abrirlo.</p>
+  </header>
+
+  <nav class="week" id="week" aria-label="Días de la semana"></nav>
+
+  <section class="sheet" id="sheet" aria-live="polite"></section>
+
+  <section class="takeaway">
+    <div>
+      <h2>Con qué <span class="serif">quedarse</span></h2>
+      <p>No hay una única noticia que lo domine todo, sino varias historias conectadas.</p>
+      <p><b>China</b> crece un 4,5 %, pero con una diferencia enorme entre su capacidad industrial y la debilidad del consumo y la inversión. En <b>EE. UU.</b>, la inflación ha vuelto al 3,7 % y la Fed se reúne la próxima semana. En <b>bolsa</b>, Netflix, Tesla, Meta, IBM y muchas otras tendrán que demostrar que sus negocios justifican las expectativas.</p>
+      <p>En <b>inteligencia artificial</b> seguimos viendo un enorme crecimiento, pero cada vez importa más cuánto beneficio generan las inversiones. Y el <b>petróleo</b> baja, pero sigue lo bastante alto como para influir en la inflación.</p>
+      <p>La pregunta de la semana: <b>¿pueden los beneficios de las empresas crecer lo suficiente como para compensar unos tipos, unos bonos y unos costes energéticos tan elevados?</b> No hace falta adivinar la respuesta: toca observar los datos.</p>
+    </div>
+    <div>
+      <h2>Las tres <span class="serif">preguntas</span></h2>
+      <ol class="qs">
+        <li><span>01</span>¿Qué esperaba el mercado?</li>
+        <li><span>02</span>¿Qué ha ocurrido realmente?</li>
+        <li><span>03</span>¿Y qué cambia después de conocerlo?</li>
+      </ol>
+      <div class="poll"><h3>¿Qué noticia creéis que puede ser más importante esta semana?</h3><ul><li>Los datos de China</li><li>Los resultados de Tesla y Meta</li><li>El futuro de la inversión en inteligencia artificial</li><li>La inflación de Reino Unido</li><li>El petróleo y los bonos</li></ul><p>Cuéntanoslo en la comunidad de Telegram.</p></div>
+    </div>
+  </section>
+
+  <div class="foot"><div class="foot-row"><a class="archive" href="../../archivo/">Ver semanas anteriores →</a><nav class="social" aria-label="Redes sociales (pie)"><a href="https://www.tiktok.com/@tradersbs" target="_blank" rel="noopener" aria-label="TikTok de Traders Business School"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.2c-1.4.1-2.7-.3-3.9-1v6.2c0 3.4-2.5 5.7-5.6 5.7-3.2 0-5.6-2.5-5.4-5.7.2-2.9 2.6-5 5.6-4.9v3.3c-1.2-.2-2.3.5-2.4 1.7-.1 1.2.8 2.2 2 2.2 1.3 0 2.2-.9 2.2-2.4V3h3.6z"/></svg><span class="txt">TikTok</span></a><a href="https://www.instagram.com/traders_business_school/" target="_blank" rel="noopener" aria-label="Instagram de Traders Business School"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg><span class="txt">Instagram</span></a></nav></div><span>Fuentes: National Bureau of Statistics of China (nota de prensa del 19 de octubre y datos industriales), U.S. Bureau of Labor Statistics (IPC de septiembre), Wall Street Journal (rentabilidad de los bonos del Tesoro), relaciones con inversores de Netflix, Tesla y Meta, IBM Newsroom, OpenAI, UK Office for National Statistics (calendario y ventas minoristas) y Bank of Japan (calendario).</span></div>
+</div>
+
+<script>
+const DAYS = [
+  {
+    iso:"2026-10-19", dow:"Lunes", short:"Lun", num:"19", mon:"oct",
+    teaser:"China crece un 4,5 % y el petróleo baja", tags:["CN","Petróleo","CA"], key:true,
+    title:"China crece, pero con dos velocidades",
+    intro:"Esta semana EE. UU. tiene pocos grandes datos, así que el foco se desplaza. Arrancamos con el PIB de China y un petróleo que baja, aunque sigue muy alto.",
+    events:[
+      {region:"CN", title:"PIB del tercer trimestre, industria, consumo e inversión", main:true,
+       text:"La economía china creció un 4,5 % interanual en el tercer trimestre, tras el 4,3 % del anterior. En los nueve primeros meses del año, el crecimiento alcanza el 4,6 %.",
+       scen:[["La parte fuerte","La producción industrial subió un 5,5 % en septiembre. La fabricación de ordenadores, equipos de comunicación y electrónica creció un 16,4 %."],["La parte débil","Las ventas minoristas solo crecieron un 1,1 % interanual en septiembre, y la inversión en activos fijos cayó un 7,2 % en los nueve primeros meses."]],
+       why:"China sigue siendo muy buena produciendo, pero todavía le cuesta que sus ciudadanos y empresas gasten e inviertan con fuerza.",
+       watch:"A vigilar: <b>materias primas, automóviles, lujo europeo, industria y compañías con mucha exposición a China</b>."},
+      {region:"PETRÓLEO", title:"El petróleo baja, pero sigue demasiado alto", main:true,
+       text:"El Brent cae alrededor de un 1,8 %, hasta unos 108 dólares por barril, y el WTI se mueve cerca de los 97 dólares. Es cierto alivio, pero los niveles siguen siendo muy elevados. Petróleo caro → gasolina cara → transporte caro → más inflación.",
+       why:"Un petróleo alto puede favorecer los ingresos de algunas energéticas, pero perjudica a aerolíneas, transporte e industria, presiona a las empresas con gran consumo energético y, al final, al consumidor.",
+       scen:[["Si sigue bajando","Los bancos centrales podrían respirar algo más."],["Si vuelve a dispararse","El problema de inflación podría prolongarse."]],
+       watch:"El petróleo sigue conectando <b>geopolítica, inflación y tipos de interés</b>."},
+      {region:"CA", title:"Canadá: inflación y encuestas del Banco de Canadá", main:true,
+       text:"Otra referencia de inflación y de cómo ven las empresas la economía, antes de las próximas decisiones de su banco central."}
+    ]
+  },
+  {
+    iso:"2026-10-20", dow:"Martes", short:"Mar", num:"20", mon:"oct",
+    teaser:"Netflix abre los resultados y empleo británico", tags:["EE. UU.","UK","UE"], key:false,
+    title:"Netflix y el empleo británico",
+    intro:"Empieza una de las semanas de resultados más interesantes del mes, con compañías de sectores muy distintos.",
+    events:[
+      {region:"EE. UU.", title:"Resultados de Netflix", main:true,
+       text:"Presenta su tercer trimestre. Servirá para ver cómo evoluciona el consumo de entretenimiento, la publicidad, el crecimiento internacional y la rentabilidad del negocio."},
+      {region:"EE. UU.", title:"GE Aerospace y General Motors",
+       text:"También presentan resultados hoy: aviación e industria por un lado, automóvil por otro."},
+      {region:"UK", title:"Empleo, desempleo y salarios",
+       text:"Primer gran dato de una semana especialmente cargada para Reino Unido. Los salarios son clave para la inflación del miércoles."},
+      {region:"UE", title:"Datos de deuda y déficit", main:true,
+       text:"Europa tiene menos grandes publicaciones esta semana. Estas cifras muestran cómo están las cuentas públicas de la región."}
+    ]
+  },
+  {
+    iso:"2026-10-21", dow:"Miércoles", short:"Mié", num:"21", mon:"oct",
+    teaser:"Tesla, Meta, IBM y la inflación británica", tags:["EE. UU.","UK","UE"], key:true,
+    title:"El gran día de resultados",
+    intro:"Tesla, Meta, IBM y SAP en el mismo día, junto al dato más importante de Reino Unido. Pasamos de hablar de expectativas a mirar números reales.",
+    events:[
+      {region:"EE. UU.", title:"Tesla", main:true,
+       text:"En el tercer trimestre entregó 486.532 vehículos y produjo algo más de 464.000. Ahora la pregunta es si los está vendiendo con buenos márgenes.",
+       watch:"La clave: <b>vender más no sirve de mucho si para hacerlo hay que bajar demasiado los precios</b>."},
+      {region:"EE. UU.", title:"Meta",
+       text:"El mercado mirará dos cosas: cuánto sigue creciendo el negocio de publicidad y cuánto dinero sigue gastando en inteligencia artificial y centros de datos."},
+      {region:"EE. UU.", title:"IBM",
+       text:"Otra oportunidad para comprobar si la enorme demanda relacionada con la IA se está convirtiendo de verdad en ingresos para las tecnológicas."},
+      {region:"UK", title:"Inflación de septiembre", main:true,
+       text:"Probablemente el dato británico más importante de la semana. Reino Unido tiene un problema parecido al de otras economías: costes elevados, tipos altos y un crecimiento que no termina de despegar.",
+       scen:[["Si sorprende al alza","Aumenta la presión sobre el Banco de Inglaterra."],["Si se modera","El Banco de Inglaterra tendrá algo más de margen."]],
+       watch:"A vigilar: <b>libra, bonos británicos y compañías ligadas al consumo</b>."},
+      {region:"UK", title:"Inflación de productores y cuentas públicas",
+       text:"Completan la foto británica del día: precios que pagan las empresas y estado de las finanzas del Gobierno."},
+      {region:"UE", title:"SAP y otras grandes tecnológicas",
+       text:"La gran tecnológica europea también presenta resultados, en un día cargado para el sector."}
+    ]
+  },
+  {
+    iso:"2026-10-22", dow:"Jueves", short:"Jue", num:"22", mon:"oct",
+    teaser:"IA: de crecer a ganar dinero", tags:["IA","JP","EE. UU."], key:false,
+    title:"Inteligencia artificial: ahora toca ganar dinero",
+    intro:"Tras Meta e IBM, el mercado digiere qué dicen los números sobre la inversión en IA. Además, Japón y Procter & Gamble.",
+    events:[
+      {region:"IA", title:"La pregunta ya no es solo crecer, sino ganar dinero", main:true,
+       text:"En los últimos meses hemos visto inversiones gigantescas en chips, servidores, centros de datos, electricidad, infraestructura cloud y nuevos modelos. OpenAI presentó este mes GPT-6 y su nueva interfaz inteligente, y el uso de estas tecnologías sigue ampliándose en empresas y productos.",
+       why:"El debate en bolsa está cambiando. Antes la pregunta era quién liderará la IA. Ahora aparece otra: ¿cuánto dinero hay que gastar para liderarla y cuánto beneficio producirá después? Los mercados asiáticos empezaron la semana con bastante volatilidad en tecnológicas por las dudas sobre si este ritmo de inversión puede mantenerse muchos años.",
+       watch:"La IA sigue siendo una historia de crecimiento, pero <b>el mercado empieza a exigir rentabilidad, no solo inversión</b>."},
+      {region:"JP", title:"Nuevas referencias financieras del Banco de Japón",
+       text:"Japón sigue siendo importante: cualquier pista sobre sus tipos puede mover el yen y los mercados internacionales."},
+      {region:"EE. UU.", title:"Procter & Gamble",
+       text:"Resultados de una de las grandes de consumo, en una temporada empresarial que sigue avanzando."}
+    ]
+  },
+  {
+    iso:"2026-10-23", dow:"Viernes", short:"Vie", num:"23", mon:"oct",
+    teaser:"PMI de octubre y la Fed a la vista", tags:["EE. UU.","UE","UK"], key:false,
+    title:"Actividad de octubre y la Fed a la vista",
+    intro:"Cerramos con las primeras lecturas de actividad de octubre y la vista puesta en la reunión de la Fed de los días 27 y 28.",
+    events:[
+      {region:"GLOBAL", title:"PMI preliminares de octubre: EE. UU., Europa y Reino Unido", main:true,
+       text:"Primera foto de la actividad empresarial de octubre. Por encima de 50, expansión; por debajo, contracción."},
+      {region:"EE. UU.", title:"La inflación sigue alta antes de la Fed", main:true,
+       text:"La inflación de septiembre fue del 3,7 % anual y subió un 0,6 % solo en el mes. Gran parte vino de la energía: la gasolina subió un 9,1 % en septiembre y un 34,2 % en el año, y la energía en conjunto sube un 20,4 % interanual. Sin alimentos ni energía, la inflación está en el 2,6 %.",
+       why:"El bono estadounidense a 10 años se mueve alrededor del 5,07 %. Si los bonos siguen ofreciendo alrededor de un 5 %, seguirán compitiendo directamente con la bolsa por el dinero de los inversores.",
+       watch:"La pregunta antes de la Fed: <b>¿la subida de la inflación es sobre todo un problema temporal de la energía, o hay riesgo de que se extienda al resto de la economía?</b>"},
+      {region:"UK", title:"Ventas minoristas de septiembre", main:true,
+       text:"Cierran la semana británica: cómo está gastando el consumidor con costes y tipos altos."}
+    ]
+  }
+];
+
+const week = document.getElementById("week");
+const sheet = document.getElementById("sheet");
+
+function todayMadrid(){
+  try{
+    return new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Madrid",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+  }catch(e){ return new Date().toISOString().slice(0,10); }
+}
+const today = todayMadrid();
+let current = Math.max(0, DAYS.findIndex(d => d.iso === today));
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+const MONTHS={ene:"enero",feb:"febrero",mar:"marzo",abr:"abril",may:"mayo",jun:"junio",jul:"julio",ago:"agosto",sep:"septiembre",oct:"octubre",nov:"noviembre",dic:"diciembre"};
+function monthName(d){ return MONTHS[d.mon] || d.mon; }
+
+DAYS.forEach((d, i) => {
+  const b = document.createElement("button");
+  b.className = "day";
+  b.type = "button";
+  b.id = "day-" + d.iso;
+  b.setAttribute("aria-pressed","false");
+  b.setAttribute("aria-controls","sheet");
+  const extras = (d.iso === today ? ", hoy" : "") + (d.key ? ", día clave" : "");
+  b.setAttribute("aria-label", d.dow + " " + d.num + " de " + monthName(d) + extras + ": " + d.teaser);
+  const badges = [];
+  if (d.iso === today) badges.push('<span class="tag tag-blue">Hoy</span>');
+  if (d.key) badges.push('<span class="tag tag-brand">Día <span class="long">clave</span></span>');
+  b.innerHTML =
+    '<div class="day-top"><span class="dow">' + d.short + '</span><span class="state"></span></div>' +
+    '<div class="date"><span class="num">' + d.num + '</span><span class="mon">' + d.mon + '</span></div>' +
+    '<div class="badges">' + badges.join("") + '</div>' +
+    '<div class="teaser">' + esc(d.teaser) + '</div>' +
+    '<div class="tags">' + d.tags.map(t => '<span class="tag tag-neutral">' + esc(t) + '</span>').join("") + '</div>';
+  b.addEventListener("click", () => open(i, true));
+  week.appendChild(b);
+});
+
+function renderEvent(ev){
+  let html = '<article class="event' + (ev.main ? ' main' : '') + '">';
+  html += '<div class="ev-head"><span class="tag tag-neutral">' + esc(ev.region) + '</span><h3>' + esc(ev.title) + '</h3></div>';
+  html += '<p>' + esc(ev.text) + '</p>';
+  if (ev.why) html += '<p class="why">' + esc(ev.why) + '</p>';
+  if (ev.scen) html += '<ul class="scen">' + ev.scen.map(s => '<li><span class="if">' + esc(s[0]) + '</span><span>' + esc(s[1]) + '</span></li>').join("") + '</ul>';
+  if (ev.watch) html += '<p class="watch">' + ev.watch + '</p>';
+  return html + '</article>';
+}
+
+// Half-width items come in pairs; a lone one at the end of a run takes the full width.
+function balance(events){
+  const out = events.map(e => Object.assign({}, e));
+  let run = [];
+  const flush = () => { if (run.length % 2 === 1) run[run.length - 1].main = true; run = []; };
+  out.forEach(e => { if (e.main) flush(); else run.push(e); });
+  flush();
+  return out;
+}
+
+// Numbers always in Space Grotesk: wrap every run of digits in running text.
+function wrapNumbers(root){
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node){
+      const el = node.parentElement;
+      if (!el || !/\d/.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+      if (el.closest("script,style,svg,.n,.num")) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    const frag = document.createDocumentFragment();
+    const text = node.nodeValue;
+    let last = 0;
+    text.replace(/\d+(?:[.,]\d+)*/g, (m, idx) => {
+      if (idx > last) frag.appendChild(document.createTextNode(text.slice(last, idx)));
+      const s = document.createElement("span");
+      s.className = "n"; s.textContent = m;
+      frag.appendChild(s);
+      last = idx + m.length;
+    });
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    node.parentNode.replaceChild(frag, node);
+  });
+}
+
+function open(i, fromClick){
+  current = i;
+  const d = DAYS[i];
+  [...week.children].forEach((b, j) => {
+    b.setAttribute("aria-pressed", j === i ? "true" : "false");
+    b.querySelector(".state").textContent = j === i ? "Abierto" : "Abrir";
+  });
+  sheet.innerHTML =
+    '<div class="sheet-head fade"><span class="eyebrow">' + d.dow + ' ' + d.num + ' de ' + monthName(d) + (d.key ? ' · Día clave' : '') + '</span>' +
+    '<h2>' + esc(d.title) + '</h2><p class="intro">' + esc(d.intro) + '</p></div>' +
+    '<div class="events fade">' + balance(d.events).map(renderEvent).join("") + '</div>' +
+    '<div class="nav">' +
+      '<button type="button" id="prev"' + (i === 0 ? ' disabled' : '') + '>← ' + (i > 0 ? DAYS[i-1].dow : 'Anterior') + '</button>' +
+      '<button type="button" id="next"' + (i === DAYS.length-1 ? ' disabled' : '') + '>' + (i < DAYS.length-1 ? DAYS[i+1].dow : 'Siguiente') + ' →</button>' +
+    '</div>';
+  wrapNumbers(sheet);
+  document.getElementById("prev").addEventListener("click", () => { if (current > 0) open(current - 1, true); });
+  document.getElementById("next").addEventListener("click", () => { if (current < DAYS.length - 1) open(current + 1, true); });
+  if (fromClick && window.matchMedia("(max-width:780px)").matches){
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    sheet.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"start"});
+  }
+}
+
+wrapNumbers(document.querySelector(".wrap"));
+open(current, false);
+</script>
+
+</body>
+</html>

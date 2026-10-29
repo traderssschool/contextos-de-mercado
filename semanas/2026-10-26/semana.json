@@ -1,0 +1,30 @@
+{
+  "titulo": "Calendario de mercado · 26 – 30 oct",
+  "rango": "Semana del 26 al 30 de octubre",
+  "h1_inicio": "La semana de los bancos",
+  "h1_cursiva": "centrales",
+  "resumen_archivo": "Fed, BCE y Banco de Japón, Microsoft y Alphabet, PCE y petróleo por encima de 100 dólares.",
+  "entradilla": "Deciden la <strong>Fed</strong>, el <strong>Banco de Canadá</strong>, el <strong>BCE</strong> y el <strong>Banco de Japón</strong>, y presentan resultados las grandes tecnológicas. De fondo, un petróleo por encima de los 100 dólares y el bono estadounidense a 10 años rozando el 5 %. Pulsa cada día para abrirlo.",
+  "con_que_quedarse": [
+    "Los bancos centrales <b>hacen una pausa, pero no dan la batalla por ganada</b>. La Fed mantiene tipos con dos votos a favor de subir, Canadá sí sube y el mercado mira ya a diciembre, tanto en EE. UU. como en Europa y Japón.",
+    "El motivo es el mismo en todas partes: <b>la energía mantiene la inflación alta</b>. Mientras el Brent siga por encima de los 100 dólares, será difícil que los tipos bajen.",
+    "En bolsa, la IA vuelve a dividir: <b>Microsoft es premiada porque su nube ya convierte la inversión en ingresos; Alphabet es castigada porque su gasto se dispara más rápido que sus beneficios</b>.",
+    "Lo que viene: Apple presenta resultados el lunes 2 de noviembre y EE. UU. celebra elecciones de medio mandato el martes 3."
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué ha ocurrido realmente?",
+    "¿Y qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué creéis que ha marcado más la semana?",
+    "opciones": [
+      "La pausa de la Fed",
+      "El BCE y Francia",
+      "Los resultados de Microsoft y Alphabet",
+      "El petróleo por encima de 100 dólares",
+      "El Banco de Japón"
+    ]
+  },
+  "fuentes": "Reserva Federal (vía Forbes Centroamérica e Infobae), Newsquawk, Yahoo Finance, The Motley Fool, Euronews, Rankia Pro, Infobae (Banco de Canadá), Portfolio Adviser (presupuestos británicos), euribor.com.es, The Rio Times (Banco de Japón), MacRumors (Apple) y Crédito y Caución (IPC de España)."
+}

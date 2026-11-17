@@ -1,0 +1,30 @@
+{
+  "titulo": "Calendario de mercado · 16 – 20 nov",
+  "rango": "Semana del 16 al 20 de noviembre",
+  "h1_inicio": "El gran examen de la",
+  "h1_cursiva": "IA",
+  "resumen_archivo": "Nvidia sin Jensen Huang, salida a bolsa de Anthropic, actas de la Fed y cumbre Trump-Xi-Putin.",
+  "entradilla": "Tres citas marcan la semana: <strong>los resultados de Nvidia</strong> tras la salida de su fundador, <strong>la salida a bolsa de Anthropic</strong> y <strong>las actas de la Fed</strong>, con una subida de tipos en diciembre cada vez más descontada. Pulsa cada día para abrirlo.",
+  "con_que_quedarse": [
+    "La IA vuelve a ser el centro del mercado, pero con dos caras: <b>Nvidia llega tras seis semanas seguidas de caídas y sin su fundador</b> y <b>Anthropic sale a bolsa con mucha demanda</b>. Lo que pase con ambas dirá mucho del ánimo inversor hacia el sector.",
+    "Mientras, <b>los tipos no dan tregua</b>: la Fed se encamina a subir en diciembre, el Banco de Inglaterra ya subió en noviembre y la inflación de la eurozona está en el 4 %. El bono estadounidense a 10 años sigue por encima del 5 %.",
+    "El alivio viene del <b>petróleo</b>, que ha bajado con fuerza en dos semanas. La cumbre de Shenzhen puede moverlo en cualquier dirección.",
+    "Lo que viene: elecciones generales en España el domingo 29 de noviembre y la reunión de la Fed de diciembre."
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué ha ocurrido realmente?",
+    "¿Y qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué creéis que marcará más la semana?",
+    "opciones": [
+      "Los resultados de Nvidia",
+      "La salida a bolsa de Anthropic",
+      "Las actas de la Fed",
+      "La cumbre Trump-Xi-Putin",
+      "El petróleo"
+    ]
+  },
+  "fuentes": "Infobae/EFE (cierre del 16 de noviembre), Bolsamanía, TradingKey (Nvidia, actas de la Fed, Walmart y Anthropic), Heygotrade (calendario de EE. UU.), Seoul Economic Daily (PIB de Japón), Infobae (cumbre de Shenzhen), ONS y Banco de Inglaterra (inflación y tipos británicos), Eurostat (inflación de la eurozona) y La Moncloa (elecciones del 29 de noviembre)."
+}

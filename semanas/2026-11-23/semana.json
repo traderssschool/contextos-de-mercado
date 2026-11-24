@@ -1,0 +1,30 @@
+{
+  "titulo": "Calendario de mercado · 23 – 27 nov",
+  "rango": "Semana del 23 al 27 de noviembre",
+  "h1_inicio": "Del desplome al",
+  "h1_cursiva": "rebote",
+  "resumen_archivo": "Rebote tras la corrección, vuelta de Jensen Huang, PCE, Acción de Gracias, IPC de España y elecciones.",
+  "entradilla": "Venimos de la <strong>peor semana del S&amp;P 500 desde abril de 2025</strong> y el lunes llegó un <strong>rebote histórico</strong>. Es una semana corta: el <strong>PCE</strong> del miércoles es el gran dato antes de la Fed, Wall Street cierra el jueves y el domingo hay <strong>elecciones en España</strong>. Pulsa cada día para abrirlo.",
+  "con_que_quedarse": [
+    "El mercado ha pasado del miedo al alivio en pocos días, y <b>Nvidia ha sido el detonante en las dos direcciones</b>. Un rebote tan fuerte tras una corrección no garantiza que haya terminado: toca ver si se sostiene.",
+    "<b>Los tipos siguen mandando</b>. La Fed se reúne el 8 y 9 de diciembre con una subida casi descontada, y el PCE del miércoles puede reforzarla o enfriarla.",
+    "En España, <b>la inflación en el 4,9 %</b> y las elecciones del domingo concentran la atención. El petróleo, en cambio, da un respiro: el Brent ya está por debajo de 90 dólares.",
+    "La pregunta de la semana: <b>¿ha sido el rebote del lunes un cambio de tendencia o solo un respiro?</b>"
+  ],
+  "preguntas": [
+    "¿Qué esperaba el mercado?",
+    "¿Qué ha ocurrido realmente?",
+    "¿Y qué cambia después de conocerlo?"
+  ],
+  "pregunta_comunidad": {
+    "texto": "¿Qué creéis que pesará más esta semana?",
+    "opciones": [
+      "El PCE de EE. UU.",
+      "Nvidia y la IA",
+      "El IPC de España",
+      "Las elecciones del domingo",
+      "La OPEP+ y el petróleo"
+    ]
+  },
+  "fuentes": "Economía Responsable (cierre del 23 de noviembre), Sensei, Metatrading Club y Moomoo (agenda y previsiones de EE. UU.), CNBC, Rankia e Infobae (resultados de Nvidia), CNN, Yahoo Finance y Deadline (salida a bolsa de Anthropic), TradingKey, Bolsamanía, Forbes España y El Boletín (agenda europea y española), Infobae (Consejo Europeo) y euribor.com.es (OPEP+)."
+}
